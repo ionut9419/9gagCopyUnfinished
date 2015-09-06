@@ -1,0 +1,1083 @@
+body{
+    width: 100%;
+    //height: 100%;
+    //border: 3px solid red;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+#firstList li{
+   display: inline;
+}
+
+#firstList{
+    float: left;
+    margin-right: -30px;
+}
+
+#firstList li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: arial;
+    padding: 12px;
+    border-right: 1px solid #282828;
+    margin-left: -5px;
+}
+
+#firstList li a:hover{
+    background-color: #282828;
+}
+
+
+#menu{
+    background-color: black;
+    width: 100%;
+    height: 55px;
+    //margin-left: -15px;
+    //border: 3px solid red;
+    position: relative;
+    //position: fixed;
+}
+
+#image{
+    margin-left: 20px;
+    margin-top: 7px;
+    //border: 3px solid red;
+    width: 55px;
+    height: 50px;
+    float: left;
+    margin-right: -25px;
+}
+
+#hot{
+    //margin-left: -30px;
+    background-color: #282828;
+}
+
+#secondList li{
+    display: inline;
+}
+
+#secondList{
+    float: left;
+}
+
+#secondList li a{
+    text-decoration: none;
+    color: darkgrey;
+    font-family: arial;
+    font-size: 13px;
+    padding: 5px;
+}
+
+#secondList li a:hover{
+    color: white;
+}
+
+#thirdList{
+    //display: inline;
+    float: left;
+    margin-left: -20px;
+}
+
+#thirdList li{
+    display: inline;
+    margin-right: 10px;
+    
+}
+
+#login{
+    text-decoration: none;
+    color: darkgray;
+    font-size: 13px;
+}
+
+#signupButton{
+    background-color: dodgerblue;
+    padding: 10px;
+    font-size: 13px;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: none;
+}
+
+#signupButton:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#loginPopUp{
+    //text-align: center;
+    height: 500px;
+    width: 500px;
+    margin-left: 400px;
+    margin-top: 50px;
+    visibility: hidden;
+    background-color: white;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 30px;
+    position:fixed;
+    width:500px;
+    height:500px;
+    margin:-290px auto auto -250px;
+    top:56%;
+    left:50%;
+}
+
+#loginPopUp h1{
+    font-family: arial, helvetica;
+    font-size: 35px;
+}
+
+#loginPopUp p{
+    font-family: arial, helvetica;
+    color: gray;
+    font-size: 13px;
+}
+
+#facebook{
+    text-decoration: none;
+    color: #E9ECF6;
+    background-color: #2142A3;
+    //padding: 20px;
+    padding: 20px 30px 20px 30px;
+    font-family: arial, helvetica;
+    font-weight: bold;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+#google{
+    text-decoration: none;
+    color: #E9ECF6;
+    background-color: #E62E00;
+    //padding: 20px;
+    padding: 20px 50px 20px 50px;
+    font-family: arial, helvetica;
+    font-weight: bold;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+#loginPopUp hr{
+    border: 0.1px solid #E0E0E0;
+}
+
+#loginPopUp label{
+    color: black;
+    font-size: 13px;
+    font-family: arial, helvetica;
+    font-weight: bold;
+}
+
+
+#loginButton{
+    background-color: dodgerblue;
+    padding: 15px 20px 15px 20px;
+    font-size: 13px;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+#loginButton:hover{
+    background-color: deepskyblue;
+}
+
+#forgotPassword{
+    float: right;
+    color: gray;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#signupPopUp{
+    width: 530px;
+    height: 300px;
+    //border: 2px solid red;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    visibility: hidden;
+    position: fixed;
+    margin:-290px auto auto -250px;
+    top:56%;
+    left:50%;
+    background-color: white;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 30px 30px 0px 30px;
+}
+
+#signupPopUp p{
+    font-size: 13px;
+    color: gray;
+}
+
+.signupLink{
+    font-size: 13px;
+    color: dodgerblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: arial, helvetica;
+}
+
+#closeButton{
+    float: right;
+}
+
+#searchbox{
+    padding: 10px;
+    visibility: hidden;
+    //width: 100px;
+    border: 1px solid lightgray;
+    color: black;
+    //box-shadow: lightgray 5px 6px 10px 0px;
+    box-shadow: black 5px 6px 20px 0px;
+    position: fixed;
+    top: 56%;
+    left: 50%;
+    margin: -323px auto auto 350px;
+}
+
+#emailRegistrationPopUp{
+    width: 400px;
+    height: 300px;
+    width: 500px;
+    height: 380px;
+    padding: 20px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-left: 400px;
+    visibility: hidden;
+    margin: -300px auto auto -250px;
+    top: 56%;
+    left: 50%;
+    position: fixed;
+    background-color: white;
+}
+
+#emailRegistrationPopUp label{
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: arial, helvetica;
+}
+
+#emailRegistrationPopUp #fullname{
+    padding: 10px;
+    border: 1px solid #E6E6E6;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    width: 450px;
+}
+#emailRegistrationPopUp #email{
+    padding: 10px;
+    border: 1px solid #E6E6E6;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    width: 450px;
+}
+#emailRegistrationPopUp #password{
+    padding: 10px;
+    border: 1px solid #E6E6E6;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    width: 450px;
+}
+
+#sections{
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    box-shadow: black 5px 6px 20px 0px;
+    position: fixed;
+    margin: -323px auto auto -383px;
+    top: 56%;
+    left: 50%;
+    line-height: 30px;
+    width: 150px;
+    visibility: hidden;
+}
+
+#sections ul{
+    list-style-type: none;
+    //margin-left: -50px;
+}
+
+#sections ul li{
+    //border: 1px solid red;
+    width: 140px;
+    margin-left: -40px;
+    padding-left: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#sections ul li:hover{
+    cursor: pointer;
+    background-color: darkgray;
+    color: white;
+}
+
+#activateAccountPrompt{
+    background-color: #FFE066;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-family: arial, helvetica;
+    line-height: 40px;
+    //display: none;
+    position: relative;
+}
+
+#header{
+    position: fixed;
+    width: 100%;
+}
+
+#mobilePopUp{
+    text-align: center;
+    position: fixed;
+    margin: -280px auto auto -250px;
+    top: 56%;
+    left: 50%;
+    //display: none;
+    visibility: hidden;
+}
+
+#mobilePopUp h1{
+    color: white;
+    font-family: arial, helvetica;
+    font-size: 33px;
+}
+
+#mobilePopUp p{
+    font-family: arial, helvetica;
+    color: white;
+    font-size: 15px;
+}
+
+#ios{
+    background-color: #3399FF;
+    padding: 20px;
+    text-decoration: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-family: arial, helvetica;
+    font-size: 17px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#ios img{
+    margin-right: 30px;
+}
+
+#android{
+    background-color: #66FF66;
+    padding: 20px;
+    text-decoration: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-family: arial, helvetica;
+    font-size: 17px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#later{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-family: arial, helvetica;
+}
+
+#later:hover{
+    text-decoration: underline;
+}
+
+#notifications{
+    background-color: #1E2227;
+    width: 32px;
+    height: 32px;
+    float: right;
+    margin-right: 210px;
+    margin-top: -40px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+#notifications:hover{
+    cursor: pointer;
+}
+
+#notifications img{
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+#avatarDiv{
+    background-color: #1E2227;
+    margin-top: -42px;
+    width: 35px;
+    height: 35px;
+    margin-right: 160px;
+    float: right;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#avatarDiv:hover{
+    cursor: pointer;
+}
+
+#avatarDiv img{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#submitButtonDiv{
+    float: right;
+    margin-right: 90px;
+    margin-top: -35px;
+}
+
+#submitButton{
+    text-decoration: none;
+    color: white;
+    font-family: arial, helvetica;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: dodgerblue;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#submitButton:hover{
+    background-color: white;
+    color: black;
+}
+
+#notificationsPopUp{
+    border: 1px solid #888888;
+    height: 450px;
+    width: 350px;
+    margin-left: 200px;
+    //box-shadow: 1px 3px 10px 0px;
+    box-shadow: black 5px 6px 20px 0px;
+    position: fixed;
+    visibility: hidden;
+    margin: -323px auto auto 280px;
+    top: 56%;
+    left: 50%;
+    background-color: white;
+}
+
+#notificationsPopUp h3{
+    font-size: 13px;
+    font-family: arial, helvetica;
+    margin-left: 15px;
+}
+
+#notificationsPopUp hr{
+    height: 0;
+    border: 0.1px solid #E8E8E8;
+}
+
+#notificationsPopUp p{
+    font-size: 14px;
+    color: gray;
+    font-family: arial, helvetica;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+#notificationsPopUp div{
+    color: gray;
+    text-align: center;
+    font-size: 13px;
+    font-family: arial, helvetica;
+    line-height: 23px;
+}
+
+#notificationsPopUp div:hover{
+    color: black;
+    cursor: pointer;
+}
+
+#avatarMenu{
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    //box-shadow: lightgray 5px 6px 10px 0px;
+    box-shadow: black 5px 6px 20px 0px;
+    position: fixed;
+    margin: -323px auto auto 410px;
+    top: 56%;
+    left: 50%;
+    line-height: 30px;
+    width: 150px;
+    visibility: hidden;
+}
+
+#avatarMenu ul{
+    list-style-type: none;
+    //margin-left: -50px;
+}
+
+#avatarMenu ul li{
+    //border: 1px solid red;
+    width: 140px;
+    margin-left: -40px;
+    padding-left: 10px;
+     color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#avatarMenu ul li:hover{
+    //cursor: pointer;
+    background-color: darkgray;
+    color: white;
+}
+
+#avatarMenu ul a{
+    text-decoration: none;
+}
+
+#submitButtonMenu{
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    //box-shadow: lightgray 5px 6px 10px 0px;
+    box-shadow: black 5px 6px 20px 0px;
+    position: fixed;
+    margin: -323px auto auto 410px;
+    top: 56%;
+    left: 50%;
+    line-height: 30px;
+    width: 150px;
+    visibility: hidden;
+}
+
+#submitButtonMenu ul{
+    list-style-type: none;
+    //margin-left: -50px;
+}
+
+#submitButtonMenu ul li{
+    //border: 1px solid red;
+    width: 140px;
+    margin-left: -40px;
+    padding-left: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#submitButtonMenu ul li:hover{
+    cursor: pointer;
+    background-color: darkgray;
+    color: white;
+}
+
+#showcase{
+    background-color: #232323;
+    width: 100%;
+    height: 240px;
+    text-align: center;
+    margin-top: 17px;
+    line-height: 10px;
+}
+
+#showcase h1{
+    color: white;
+    font-family: arial, helvetica;
+}
+
+#showcase p{
+    color: #BEBEBE;
+    font-size: 14px;
+    font-family: arial, helvetica;
+}
+
+#showcase a img{
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   margin-top: 40px;
+}
+
+#profileTabs ul a{
+    text-decoration: none;
+    font-family: arial, helvetica;
+    font-size: 13px;
+    color: black;
+    font-weight: bold;
+}
+
+#profileTabs ul a li{
+    display: inline;
+    margin-left: 30px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#posts1:hover{
+    border-bottom: 3px solid black;
+}
+
+#upvotes1:hover{
+    border-bottom: 3px solid black;
+}
+
+#comments1:hover{
+    border-bottom: 3px solid black;
+}
+
+#overview1{
+    border-bottom: 3px solid dodgerblue;
+}
+
+#posts2{
+    border-bottom: 3px solid dodgerblue;
+}
+
+#upvotes2:hover{
+    border-bottom: 3px solid black;
+}
+
+#comments2:hover{
+    border-bottom: 3px solid black;
+}
+
+#overview2:hover{
+    border-bottom: 3px solid black;
+}
+
+#posts3:hover{
+    border-bottom: 3px solid black;
+}
+
+#upvotes3{
+    border-bottom: 3px solid dodgerblue;
+}
+
+#comments3:hover{
+    border-bottom: 3px solid black;
+}
+
+#overview3:hover{
+    border-bottom: 3px solid black;
+}
+
+#posts4:hover{
+    border-bottom: 3px solid black;
+}
+
+#upvotes4:hover{
+    border-bottom: 3px solid black;
+}
+
+#comments4{
+    border-bottom: 3px solid dodgerblue;
+}
+
+#overview4:hover{
+    border-bottom: 3px solid black;
+}
+
+#profileTabs hr{
+    border: 1px solid #e0e0e0;
+    height: 1px;
+}
+
+#postsUpvotedCommented{
+    height: 300px;
+    width: 700px;
+    margin-top: 25px;
+    margin-left: 100px;
+    background-color: #F0F0F0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#postsUpvotedCommented p{
+    color: #929292;
+    font-family: arial, helvetica;
+    font-size: 17px;
+    padding-top: 120px;
+}
+
+#whatsHot{
+    background-color: dodgerblue;
+    padding: 10px;
+    font-size: 13px;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: none;
+}
+
+#whatsHot:hover{
+    background-color: #3399FF;
+}
+
+#settingsTabs{
+    width: 350px;
+    height: 180px;
+    //line-height: 30px;
+    margin: 50px auto auto 125px;
+    float: left;
+}
+
+#settingsTabs ul{
+    list-style-type: none;
+}
+
+#settingsTabs ul a li{
+    display: block;
+    padding: 11px;
+}
+
+#settingsTabs ul a{
+    text-decoration: none;
+    font-family: arial, helvetica;
+    font-size: 13px;
+    font-weight: bold;
+    color: #959595;
+}
+
+#differentLI{
+    background-color: #196CE8;
+    color: white;
+    width: 240px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.settingsContentClass{
+    float: left;
+    margin-top: 45px;
+    //border: 1px solid green;
+    width: 800px;
+}
+
+.headerClass{
+    font-family: arial, helvetica;
+    font-size: 36px;
+}
+
+#accountUsernameLabel{
+    color: black;
+    font-size: 13px;
+    font-family: arial, helvetica;
+    font-weight: bold;
+}
+
+.labelClass{
+    color: black;
+    font-size: 13px;
+    font-family: arial, helvetica;
+    font-weight: bold;
+}
+
+.textInput{
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    width: 450px;
+    margin: 7px auto 5px auto;
+}
+
+.settingsContentClass span{
+    font-family: arial, helvetica;
+    font-size: 13px;
+    color: gray;
+}
+
+.settingsContentClass select{
+    margin-top: 5px;
+    height: 40px;
+    border: 1px solid #898989;
+    font-weight: bold;
+    font-family: arial, helvetica;
+    font-size: 13px;
+}
+
+.blueButton{
+    background-color: dodgerblue;
+    padding: 15px 25px 15px 25px;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: none;
+}
+
+.blueButton:hover{
+    background-color: #3399FF;
+    cursor: pointer;
+}
+
+#accountCheckboxLabel{
+    font-size: 13px;
+    font-family: arial, helvetica;
+    color: black;
+}
+
+.blueLink{
+    font-size: 13px;
+    color: dodgerblue;
+    text-decoration: none;
+    //font-weight: bold;
+    font-family: arial, helvetica;
+}
+
+#enableDisableUpvote{
+    margin-top: 15px;
+}
+
+.settingsFooter{
+    margin-left: 400px;
+    padding-bottom: 50px;
+}
+
+.settingsFooter ul{
+    list-style-type: none;
+}
+
+.settingsFooter ul a{
+    text-decoration: none;
+}
+
+.settingsFooter ul a li{
+    display: inline;
+    color: gray;
+    font-size: 13px;
+    font-family: arial, helvetica;
+    padding: 20px;
+}
+
+#copyrightLI{
+    display: inline;
+    color: gray;
+    font-size: 13px;
+    font-family: arial, helvetica;
+}
+
+#settingsProfileAvatar{
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#yearInput{
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    width: 150px;
+    margin: 7px 10px 5px auto;
+    color: #959595;
+    text-align: center;
+}
+
+#monthInput{
+    padding: 10px;
+    color: #959595;
+    border: 1px solid #e0e0e0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    width: 75px;
+    margin: 7px 10px 5px auto;
+    text-align: center;
+}
+
+#dayInput{
+    padding: 10px;
+    color: #959595;
+    border: 1px solid #e0e0e0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    width: 75px;
+    margin: 7px 10px 5px auto;
+    text-align: center;
+}
+
+.settingsSocialNetworkDiv{
+    //border: 1px solid black;
+    padding: 15px;
+    height: 45px;
+    width: 440px;
+    color: gray;
+    font-family: arial, helvetica;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #EFEFEF;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid #D7D7D7;
+    margin-top: 15px;
+}
+
+.settingsSocialNetworkLayout1{
+    width: 170px;
+    margin-top: 15px;
+}
+
+.settingsSocialNetworkLayout2{
+    float: right;
+    height: 50px;
+    margin-top: -15px;
+}
+
+#settingsBrowseDiv{
+    float: right;
+    margin-right: 440px;
+    margin-top: 10px;
+}
+
+.settingsNotificationsGrayBox{
+    border-bottom: 1px solid #e0e0e0;
+    width: 450px;
+    padding: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #F4F4F4;
+}
+
+.settingsNotificationsGrayBox h3{
+    font-size: 13px;
+    font-family: arial, helvetica;
+    font-weight: bold;
+    color: #9E9E9E;
+}
+
+.settingsNotificationsGrayBox hr{
+    border: 1px solid #e0e0e0;
+}
+
+.settingsNotificationsGrayBox label{
+    color: black;
+    font-size: 13px;
+    font-family: arial, helvetica;
+}
+
+.errorContent{
+   width: 500px;
+   margin-left: 450px;
+   margin-top: 80px;
+}
+
+.errorContent h1{
+    font-family: arial, helvetica;
+    font-size: 38px;
+}
+
+.errorParagraph{
+    font-family: arial, helvetica;
+    font-size: 13px;
+    color: red;
+/*    border: 1px solid black;*/
+}
+
+.simpleParagraph{
+    font-family: arial, helvetica;
+    font-size: 13px;
+    color: #999999;
+}
+
+
+#settingsModifiedConfirmation{
+    background-color: #29A329;
+    box-shadow: lightgray 1px 5px 5px 0px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-family: arial, helvetica;
+    //color: black;
+    font-size: 14px;
+    height: 20px;
+    width: 250px;
+    padding: 7px;
+    position: fixed;
+    margin: -310px auto auto -110px;
+    top: 56%;
+    left: 50%;
+    visibility: hidden;
+}
+
+#deleteAccountButton{
+    font-family: arial, helvetica;
+    font-size: 13px;
+    color: #999999;
+    border: none;
+    background: none;
+}
+
+#deleteAccountButton:hover{
+    cursor: pointer;
+}
+
+#deleteAccountPopUp{
+   width: 500px;
+   margin-left: 450px;
+   margin-top: 80px;
+   visibility: hidden;
+}
