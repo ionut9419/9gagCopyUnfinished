@@ -107,23 +107,113 @@ _END;
             </ul>
         </div>
         <div class='settingsContentClass'>
+            <form action='saveChangesNotifications.php' method='POST'>
             <h1 class='headerClass'>Notifications</h1>
             <div class='settingsNotificationsGrayBox'>
                 <h3>Activity related to you and your posts</h3>
                 <hr/><br/>
-                <input type='checkbox' id='postsAreUpvoted' name='postsAreUpvoted' checked/>
+                <input type='checkbox'  id='myPostsUpvoted' name='myPostsUpvoted'/>
                 <label for='postsAreUpvoted'>My posts are upvoted</label>
             </div><br/><br/>
             <div class='settingsNotificationsGrayBox'>
                 <h3>Updates from 9GAG</h3>
                 <hr/><br/>
-                <input type='checkbox' checked/><label>News about 9GAG products and features</label><br/><br/>
-                <input type='checkbox' checked/><label>Things I missed since I last visited 9GAG</label><br/><br/>
-                <input type='checkbox' checked/><label>News about 9GAG on partner products and services</label><br/><br/>
-                <input type='checkbox' checked/><label>Participation in 9GAG research surveys</label><br/><br/>
-                <input type='checkbox' checked/><label>Suggestions about people I maybe interested in</label><br/><br/>
+                <input type='checkbox' id='newsProductsFeatures' name='newsProductsFeatures'/><label>News about 9GAG products and features</label><br/><br/>
+                <input type='checkbox' id='thingsMissed' name='thingsMissed'/><label>Things I missed since I last visited 9GAG</label><br/><br/>
+                <input type='checkbox' id='advertisementCheckbox' name='advertisementCheckbox'/><label>News about 9GAG on partner products and services</label><br/><br/>
+                <input type='checkbox' id='researchSurveys' name='researchSurveys'/><label>Participation in 9GAG research surveys</label><br/><br/>
+                <input type='checkbox' id='peopleSuggestions' name='peopleSuggestions'/><label>Suggestions about people I maybe interested in</label><br/><br/>
+                <?php
+                    if($_COOKIE['myPostsUpvoted'] == "on"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('myPostsUpvoted').checked = true;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['myPostsUpvoted'] == "off"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('myPostsUpvoted').checked = false;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['newsProductsFeatures'] == "on"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('newsProductsFeatures').checked = true;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['newsProductsFeatures'] == "off"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('newsProductsFeatures').checked = false;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['thingsMissed'] == "on"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('thingsMissed').checked = true;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['thingsMissed'] == "off"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('thingsMissed).checked = false;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['advertisementCheckbox'] == "on"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('advertisementCheckbox').checked = true;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['advertisementCheckbox'] == "off"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('advertisementCheckbox').checked = false;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['researchSurveys'] == "on"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('researchSurveys').checked = true;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['researchSurveys'] == "off"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('researchSurveys').checked = false;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['peopleSuggestions'] == "on"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('peopleSuggestions').checked = true;
+                        </script>
+_END;
+                    }
+                    if($_COOKIE['peopleSuggestions'] == "off"){
+                        echo <<<_END
+                        <script>
+                            document.getElementById('peopleSuggestions').checked = false;
+                        </script>
+_END;
+                    }
+                ?>
             </div><br/><br/><br/>
-            <a href='javascript:void(0);' class='blueButton'>Save Changes</a><br/><br/><br/><br/><br/>
+            <!--<a href='javascript:void(0);' class='blueButton'>Save Changes</a>-->
+                <input type='submit' value='Save Changes' class='blueButton'/>
+            </form>
+            <br/><br/><br/><br/><br/>
         </div>
         <div class='settingsFooter'>
             <ul>
@@ -174,7 +264,7 @@ _END;
                 <ul>
                     <li>Add from URL</li>
                     <li>Upload image</li>
-                    <li>Make a meme</li>
+                    <a href='http://memeful.com/generator?ref=9gag'><li>Make a meme</li></a>
                 </ul>
             </div>
         </div>

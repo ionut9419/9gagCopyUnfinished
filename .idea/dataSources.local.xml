@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - 9gag@localhost" uuid="998e5c4d-3a96-49f3-a9a2-28c6a8b63465">
+      <secret-storage>master_key</secret-storage>
+      <user-name>USER</user-name>
+      <schema-pattern>9gag.*</schema-pattern>
+      <default-schemas>9gag.*</default-schemas>
+    </data-source>
+  </component>
+</project>

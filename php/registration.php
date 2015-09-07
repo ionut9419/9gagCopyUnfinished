@@ -45,7 +45,9 @@
                 $connection->close();
                 exit();
             }
-        $query = "insert into members (username, full_name, email, password, avatar, description, facebook, google_plus, show_nsfw, hide_upvotes) values ('$username', '$fullname', '$email', '$password', '$avatar', 'My Funny Collection', 'not connected', 'not connected', 'off', 'unchecked');";
+        $query = "insert into members"
+                . " (username, full_name, email, password, avatar, description, facebook, google_plus, show_nsfw, hide_upvotes, my_posts_upvoted, news_products_features, things_missed, advertisement_checkbox, research_surveys, people_suggestions) "
+                . "values ('$username', '$fullname', '$email', '$password', '$avatar', 'My Funny Collection', 'not connected', 'not connected', 'off', 'off', 'on', 'on', 'on', 'on', 'on', 'on');";
         $connection->query($query);
         $_SESSION['freshMember'] = true;
         setcookie("loggedIn", true, time() + (86400 * 30), "/");
@@ -62,6 +64,12 @@
         setcookie('gender', 'undefined', time() + (86400 * 30), "/");
         setcookie('birthday', 'undefined', time() + (86400 * 30), "/");
         setcookie('country', 'undefined', time() + (86400 * 30), "/");
+        setcookie('myPostsUpvoted', 'on', time() + (86400 * 30), "/");
+        setcookie('newsProductsFeatures', 'on', time() + (86400 * 30), "/");
+        setcookie('thingsMissed', 'on', time() + (86400 * 30), "/");
+        setcookie('advertisementCheckbox', 'on', time() + (86400 * 30), "/");
+        setcookie('researchSurveys', 'on', time() + (86400 * 30), "/");
+        setcookie('peopleSuggestions', 'on', time() + (86400 * 30), "/");
 //        $fullname = str_replace(' ', '', $fullname);
 //        $fullname = strtolower($fullname);
 //        $old_umask = umask(0);

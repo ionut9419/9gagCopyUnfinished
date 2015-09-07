@@ -161,7 +161,7 @@ _END;
                 <ul>
                     <li>Add from URL</li>
                     <li>Upload image</li>
-                    <li>Make a meme</li>
+                    <a href='http://memeful.com/generator?ref=9gag'><li>Make a meme</li></a>
                 </ul>
             </div>
         </div>

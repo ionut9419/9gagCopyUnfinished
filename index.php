@@ -274,15 +274,149 @@ _END;
                     <a href='javascript:void(0);' onclick="submitLogoffForm()"><li>Logout</li></a>
                     <form action="php/logedoff.php" method="POST" id="logoffForm">
                     </form>
-                    
                 </ul>
             </div>
             <div id='submitButtonMenu'>
                 <ul>
-                    <li>Add from URL</li>
-                    <li>Upload image</li>
-                    <li>Make a meme</li>
+                    <li onclick="getPostFunURL()">Add from URL</li>
+                    <li onclick="getPostFunFile()">Upload image</li>
+                    <a href="http://memeful.com/generator?ref=9gag"><li>Make a meme</li></a>
                 </ul>
+            </div>
+            <div class="postAFun" id="postAFunURL">
+                <form action="php/submit.php" method="POST">
+                    <h1>Post a fun</h1>
+                    <p class="simpleParagraph">Upload funny pictures, paste pictures URL, accepting
+                        GIF/JPG/PNG (Max size: 3MB)</p>
+                    <input type="text" placeholder="http://" class="textInput"/><br/><br/>
+                    <label for="title" class="labelClass">Title</label><br/>
+                    <textarea rows="3" cols="30" class="textInput"></textarea><br/><br/>
+                    <label for="sections" class="labelClass">Choose Sections (max. 2)</label><br/>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="nsfwURL" name="nsfwURL"/>
+                                <span>NSFW</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="memeURL" name="memeURL"/>
+                                <span>Meme</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cosplayURL" name="cosplayURL"/>
+                                <span>Cosplay</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="timelyURL" name="timelyURL"/>
+                                <span>Timely</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="wtfURL" name="wtfURL"/>
+                                <span>WTF</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cuteURL" name="cuteURL"/>
+                                <span>Cute</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="foodURL" name="foodURL"/>
+                                <span>Food</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="designURL" name="designURL"/>
+                                <span>Design</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="geekyURL" name="geekyURL"/>
+                                <span>Geeky</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="comicURL" name="comicURL"/>
+                                <span>Comic</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="girlURL" name="girlURL"/>
+                                <span>Girl</span>
+                            </li>
+                        </ul>
+                        <div class="bottomDiv">
+                        <label for="originalCreator">
+                            <input type="checkbox" id="originalCreatorURL" name="originalCreatorURL"/>
+                            <span>Attribute original creator</span>
+                        </label><br/><br/><br/>
+                        <input type="submit" value="Upload" class="blueButton"/>
+                        </div>
+                </form>
+            </div>
+            <div class="postAFun" id="postAFunFile">
+                <form>
+                <h1>Post a fun</h1>
+                <p class="simpleParagraph"></p>
+                <input type="file" id="browseMeme" name="browseMeme"/><br/><br/>
+                <label for="title" class="labelClass">Title</label><br/>
+                <textarea rows="3" cols="30" class="textInput"></textarea><br/><br/>
+                <label for="sections" class="labelClass">Choose Sections (max. 2)</label><br/>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="nsfwFile" name="nsfwFile"/>
+                        <span>NSFW</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="memeFile" name="memeFile"/>
+                        <span>Meme</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="cosplayFile" name="cosplayFile"/>
+                        <span>Cosplay</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="timelyFile" name="timelyFile"/>
+                        <span>Timely</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="wtfFile" name="wtfFile"/>
+                        <span>WTF</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="cuteFile" name="cuteFile"/>
+                        <span>Cute</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="foodFile" name="foodFile"/>
+                        <span>Food</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="designFile" name="designFile"/>
+                        <span>Design</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="geekyFile" name="geekyFile"/>
+                        <span>Geeky</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="comicFile" name="comicFile"/>
+                        <span>Comic</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="girlFile" name="girlFile"/>
+                        <span>Girl</span>
+                    </li>
+                </ul>
+                <div class="bottomDiv">
+                    <label>
+                        <input type="checkbox" id="originalCreatorFile" name="originalCreatorFile"/>
+                        <span>Attribute original creator</span>
+                    </label><br/><br/><br/>
+                    <input type="submit" value="Upload" class="blueButton"/>
+                </div>
+                </form>
             </div>
         </div>
     </body>

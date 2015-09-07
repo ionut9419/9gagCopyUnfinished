@@ -160,13 +160,13 @@ _END;
                     $query = "select extract(year from birthday) as year from members where email='{$_COOKIE['email']}'";
                     $result = $connection->query($query);
                     echo <<<_END
-                    <input type='text' id='yearInput' name='yearInput' value="
+                    <input type='text' id='yearInput' placeholder='YYYY' name='yearInput' value="
 _END;
                     if($result->num_rows != 0){
                         $row = $result->fetch_assoc();
                         echo <<<_END
 {$row['year']}"/>
-                       <input type='text' id='monthInput' name='monthInput' value="
+                       <input type='text' id='monthInput' placeholder='MM' name='monthInput' value="
 _END;
                          $query = "select extract(month from birthday) as month from members where email='{$_COOKIE['email']}'";
                          $result = $connection->query($query);
@@ -174,7 +174,7 @@ _END;
                              $row = $result->fetch_assoc();
                              echo <<<_END
 {$row['month']}"/>
-                       <input type='text' id='dayInput' name='dayInput' value="
+                       <input type='text' id='dayInput' placeholder='DD' name='dayInput' value="
 _END;
                         $query = "select extract(day from birthday) as day from members where email='{$_COOKIE['email']}'";
                         $result = $connection->query($query);
@@ -192,15 +192,15 @@ _END;
                          }else{
                             echo <<<_END
                              "/>
-                             <input type='text' id='dayInput' name='dayInput'/><br/><br/>
+                             <input type='text' id='dayInput' placeholder='DD' name='dayInput'/><br/><br/>
 _END;
                          }
 //                    $query = "select extract(day from birthday) from members where email='{$_COOKIE['email']}'";
                     }else{
                         echo <<<_END
                         "/>
-                        <input type='text' id='monthInput' name='monthInput'/>
-                        <input type='text' id='dayInput' name='dayInput'/><br/><br/>
+                        <input type='text' id='monthInput' placeholder='MM' name='monthInput'/>
+                        <input type='text' id='dayInput' placeholder='DD' name='dayInput'/><br/><br/>
 _END;
                     }
                    if(isset($_SESSION['error']) && $_SESSION['error'] != ""){
@@ -216,6 +216,7 @@ _END;
                 <option value=''></option>
                 <option value='Afghanistan' id="Afghanistan">Afghanistan</option>
                 <option value='Albania' id="Albania">Albania</option>
+                <option value='Algeria' id='Algeria'>Algeria</option>
                 <option value='Andorra'id="Andorra">Andorra</option>
                 <option value='Angola' id="Angola">Angola</option>
                 <option value='Antigua and Barbuda' id="Antigua and Barbuda">Antigua and Barbuda</option>
@@ -243,6 +244,7 @@ _END;
                 <option value='Burkina Faso' id="Burkina Faso">Burkina Faso</option>
                 <option value='Burma' id="Burma">Burma</option>
                 <option value='Burundi' id="Burundi">Burundi</option>
+                <option value='Cabo Verde' id='Cabo Verde'>Cabo Verde</option>
                 <option value='Cambodia' id="Cambodia">Cambodia</option>
                 <option value='Cameroon' id="Cameroon">Cameroon</option>
                 <option value='Canada' id="Canada">Canada</option>
@@ -357,6 +359,7 @@ _END;
                 <option value='Poland' id='Poland'>Poland</option>
                 <option value='Portugal' id='Portugal'>Portugal</option>
                 <option value='Qatar' id='Qatar'>Qatar</option>
+                <option value='Republic of Korea' id='Republic of Korea'>Republic of Korea</option>
                 <option value='Romania' id="Romania">Romania</option>
                 <option value='Russia' id='Russia'>Russia</option>
                 <option value='Rwanda' id='Rwanda'>Rwanda</option>
@@ -378,7 +381,6 @@ _END;
                 <option value='Solomon Islands' id='Solomon Islands'>Solomon Islands</option>
                 <option value='Somalia' id='Somalia'>Somalia</option>
                 <option value='South Africa' id='South Africa'>South Africa</option>
-                <option value='Republic of Korea' id='Republic of Korea'>Republic of Korea</option>
                 <option value='Spain' id='Spain'>Spain</option>
                 <option value='Sri Lanka' id='Sri Lanka'>Sri Lanka</option>
                 <option value='Sudan' id='Sudan'>Sudan</option>
@@ -403,6 +405,7 @@ _END;
                 <option value="Ukraine" id='Ukraine'>Ukraine</option>
                 <option value="United Arab Emirates" id='United Arab Emirates'>United Arab Emirates</option>
                 <option value="United Kingdom" id='United Kingdom'>United Kingdom</option>
+                <option value='United States' id='United States'>United States</option>
                 <option value="Uruguay" id='Uruguay'>Uruguay</option>
                 <option value="Uzbekistan" id='Uzbekistan'>Uzbekistan</option>
                 <option value="Vanuatu" id='Vanuatu'>Vanuatu</option>
@@ -473,7 +476,7 @@ _END;
                 <ul>
                     <li>Add from URL</li>
                     <li>Upload image</li>
-                    <li>Make a meme</li>
+                    <a href="http://memeful.com/generator?ref=9gag"><li>Make a meme</li></a>
                 </ul>
             </div>
         </div>

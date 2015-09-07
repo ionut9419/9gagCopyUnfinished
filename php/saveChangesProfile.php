@@ -21,7 +21,13 @@
         $connection->query($query);
     }
     
-    if(!isset($_POST['yearInput']) || $_POST['yearInput'] == "" ||
+    if((!isset($_POST['yearInput']) || $_POST['yearInput'] == "") &&
+       (!isset($_POST['monthInput']) || $_POST['monthInput'] == "") &&
+       (!isset($_POST['dayInput']) || $_POST['dayInput'] == "")){
+        
+        
+    }
+    else if(!isset($_POST['yearInput']) || $_POST['yearInput'] == "" ||
             !isset($_POST['monthInput']) || $_POST['monthInput'] == "" ||
             !isset($_POST['dayInput']) || $_POST['dayInput'] == ""){
         $_SESSION['error'] = "Invalid date.";
@@ -63,9 +69,9 @@
         setcookie('description', $description, time() + (86400 * 30), "/");
 //        error_log($_POST['description'], 3, "../logs.txt");
     }else{
-        $query = "UPDATE members set description=' ' where email='{$_COOKIE['email']}'";
-        $connection->query($query);
-        setcookie('description', " ", time() + (86400 * 30), "/");
+//        $query = "UPDATE members set description=' ' where email='{$_COOKIE['email']}'";
+//        $connection->query($query);
+//        setcookie('description', " ", time() + (86400 * 30), "/");
     }
     
     $connection->close();

@@ -601,6 +601,10 @@ body{
     //margin-left: -50px;
 }
 
+#submitButtonMenu ul a{
+    text-decoration: none;
+}
+
 #submitButtonMenu ul li{
     //border: 1px solid red;
     width: 140px;
@@ -1080,4 +1084,47 @@ body{
    margin-left: 450px;
    margin-top: 80px;
    visibility: hidden;
+}
+
+.postAFun{
+    width: 500px;
+    height: 650px;
+    margin-left: 400px;
+    padding: 30px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: white;
+    position: fixed;
+    margin: -400px auto auto -250px;
+    top: 56%;
+    left: 50%;
+    /*overflow-y: scroll;*/
+    visibility: hidden;
+}
+
+.postAFun ul{
+    list-style-type: none;
+    line-height: 40px;
+    float: left;
+}
+
+.postAFun ul li span{
+    font-size: 13px;
+    font-family: arial, helvetica;
+}
+
+.postAFun h1{
+    font-family: arial, helvetica;
+}
+
+.bottomDiv{
+    margin-left: 30px;
+    /*border: 1px solid red;*/
+    width: 200px;
+}
+
+.bottomDiv span{
+    font-size: 13px;
+    font-family: arial, helvetica;
 }

@@ -4,6 +4,7 @@
     $connection = new mysqli($host, $user, $pass, $database);
     if($connection->connect_errno) die($connection->connect_error);
     header('Location: account.php');
+//    $_POST['enableDisableUpvote'] = $_COOKIE['hideUpvotes'];
     $_SESSION['error'] = null;
     if(($_POST['accountUsername'] !== $_COOKIE['username']) && $_POST['accountUsername'] != ""){
         $accountUsername = $_POST['accountUsername'];
@@ -22,15 +23,21 @@
         $connection->query($query);
         setcookie('showNSFW', $showNSFW, time() + (86400 * 30), "/");
     }
-    if(($_POST['enableDisableUpvote'] !== $_COOKIE['hideUpvotes']) && $_POST['enableDisableUpvote'] != null){
-        $hideUpvotes = $_POST['enableDisableUpvote'];
+    if($_COOKIE['hideUpvotes'] == "on" && $_POST['enableDisableUpvote'] == null){
+        $hideUpvotes = "off";
+        $query = "UPDATE members set hide_upvotes='{$hideUpvotes}' where email='{$_COOKIE['email']}'";
+        $connection->query($query);
+        setcookie('hideUpvotes', 'off', time() + (86400 * 30), "/");
+//        error_log($_POST['enableDisableUpvote'], 3, "../logs.txt");
+    }else if($_COOKIE['hideUpvotes'] == "off" && $_POST['enableDisableUpvote'] != null){
+        $hideUpvotes = "on";
         $query = "UPDATE members set hide_upvotes='{$hideUpvotes}' where email='{$_COOKIE['email']}'";
         $connection->query($query);
         setcookie('hideUpvotes', $hideUpvotes, time() + (86400 * 30), "/");
+//        error_log($_POST['enableDisableUpvote'], 3, "../logs.txt");
     }else{
-        $hideUpvotes = $_POST['enableDisableUpvote'];
-        $query = "UPDATE members set hide_upvotes='{$hideUpvotes}' where email='{$_COOKIE['email']}'";
-        $connection->query($query);
-        setcookie('hideUpvotes', 'undefined', time() + (86400 * 30), "/");
+        
     }
+    
+    $connection->close();
 ?>

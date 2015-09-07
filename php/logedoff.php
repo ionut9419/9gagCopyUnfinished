@@ -9,6 +9,12 @@
     unset($_COOKIE['google+']);
     unset($_COOKIE['showNSFW']);
     unset($_COOKIE['hideUpvotes']);
+    unset($_COOKIE['myPostsUpvoted']);
+    unset($_COOKIE['newsProductsFeatures']);
+    unset($_COOKIE['thingsMissed']);
+    unset($_COOKIE['advertisementCheckbox']);
+    unset($_COOKIE['researchSurveys']);
+    unset($_COOKIE['peopleSuggestions']);
     setcookie('loggedIn', false, time() + (86400 * 30), '/');
     setcookie('username', null, -1, "/");
     setcookie('fullname', null, -1, '/');
@@ -20,7 +26,12 @@
     setcookie('google+', null, -1, "/");
     setcookie('showNSFW', null, -1, "/");
     setcookie('hideUpvotes', null, -1, "/");
-    
+    setcookie('myPostsUpvoted', null, -1, "/");
+    setcookie('newsProductsFeatures', null, -1, "/");
+    setcookie('thingsMissed', null, -1, "/");
+    setcookie('advertisementCheckbox', null, -1, "/");
+    setcookie('researchSurveys', null, -1, "/");
+    setcookie('peopleSuggestions', null, -1, "/");
      if(isset($_COOKIE['gender']) && $_COOKIE['gender'] != ""){
          unset($_COOKIE['gender']);
          setcookie('gender', null, -1, "/");

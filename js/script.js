@@ -1,4 +1,4 @@
-var x = -1;
+            var x = -1;
             var y = -1;
             var z = -1;
             var alfa = -1;
@@ -7,6 +7,8 @@ var x = -1;
             var delta = -1;
             var teta = -1;
             var lambda = -1;
+            var kappa = -1;
+            var sigma = -1;
             function morph(){
                 document.getElementById('magnifier').src = "https://9to5google.files.wordpress.com/2011/12/google-search-magnifier-icon.png";
             }
@@ -289,4 +291,48 @@ var x = -1;
                 }
                 document.getElementById('deleteAccountPopUp').style.visibility = "hidden";
                 lambda = lambda * -1;
+            }
+            function getPostFunURL(){
+                if(kappa == 1){
+                    hidePostFunURL();
+                    return;
+                }
+                document.getElementById('postAFunURL').style.visibility = "visible";
+                document.getElementById('body').style.overflowY = "hidden";
+                document.getElementById('content').style.opacity = "0.5";
+                document.getElementById('content').style.background = "rgba(0, 0, 0, 0.6)";
+                kappa = kappa * -1;
+            }
+            function hidePostFunURL(){
+                if(kappa == -1){
+                    getPostFunURL();
+                    return;
+                }
+                document.getElementById('postAFunURL').style.visibility = "hidden";
+                document.getElementById('body').style.overflowY = "visible";
+                document.getElementById('content').style.opacity = "1";
+                document.getElementById('content').style.background = "white";
+                kappa = kappa * -1;
+            }
+            function getPostFunFile(){
+                if(sigma == 1){
+                    hidePostFunFile();
+                    return;
+                }
+                document.getElementById('postAFunFile').style.visibility = "visible";
+                document.getElementById('body').style.overflowY = "hidden";
+                document.getElementById('content').style.opacity = "0.5";
+                document.getElementById('content').style.background = "rgba(0, 0, 0, 0.6)";
+                sigma = sigma * -1;
+            }
+            function hidePostFunFile(){
+                if(sigma == -1){
+                    getPostFunFile();
+                    return;
+                }
+                document.getElementById('postAFunFile').style.visibility = "hidden";
+                document.getElementById('body').style.overflowY = "visible";
+                document.getElementById('content').style.opacity = "1";
+                document.getElementById('content').style.background = "white";
+                sigma = sigma * -1;
             }

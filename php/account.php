@@ -166,6 +166,13 @@ _END;
                     </script>
 _END;
                 }
+                if($_COOKIE['hideUpvotes'] == "off"){
+                    echo <<<_END
+                    <script>
+                        document.getElementById('enableDisableUpvote').checked = false;
+                    </script>
+_END;
+                }
             ?>
             <br/><br/><br/>
             <input type='submit' value='Save Changes' class='blueButton'/><br/><br/><br/><br/>
@@ -223,7 +230,7 @@ _END;
                 <ul>
                     <li>Add from URL</li>
                     <li>Upload image</li>
-                    <li>Make a meme</li>
+                    <a href='http://memeful.com/generator?ref=9gag'><li>Make a meme</li></a>
                 </ul>
             </div>
         </div>

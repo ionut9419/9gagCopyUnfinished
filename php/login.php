@@ -29,6 +29,12 @@
                 $googleplus = $row['google_plus'];
                 $showNSFW = $row['show_nsfw'];
                 $hideUpvotes = $row['hide_upvotes'];
+                $myPostsUpvoted = $row['my_posts_upvoted'];
+                $newsProductsFeatures = $row['news_products_features'];
+                $thingsMissed = $row['things_missed'];
+                $advertisementCheckbox = $row['advertisement_checkbox'];
+                $researchSurveys = $row['research_surveys'];
+                $peopleSuggestions = $row['people_suggestions'];
                 setcookie("loggedIn", true, time() + (86400 * 30), "/");
                 setcookie("username", $username, time() + (86400 * 30), "/");
                 setcookie("fullname", $fullname, time() + (86400 * 30), "/");
@@ -39,11 +45,18 @@
                 setcookie("facebook", $facebook, time() + (86400 * 30), "/");
                 setcookie("google+", $googleplus, time() + (86400 * 30), "/");
                 setcookie("showNSFW", $showNSFW, time() + (86400 * 30), "/");
-                if($hideUpvotes != null){
-                    setcookie("hideUpvotes", $hideUpvotes, time() + (86400 * 30), "/");
-                }else{
-                    setcookie('hideUpvotes', 'undefined', time() + (86400 * 30), "/");
-                }
+                setcookie("hideUpvotes", $hideUpvotes, time() + (86400 * 30), "/");
+                setcookie('myPostsUpvoted', $myPostsUpvoted, time() + (86400 * 30), "/");
+                setcookie("newsProductsFeatures", $newsProductsFeatures, time() + (86400 * 30), "/");
+                setcookie("thingsMissed", $thingsMissed, time() + (86400 * 30), "/");
+                setcookie("advertisementCheckbox", $advertisementCheckbox, time() + (86400 * 30), "/");
+                setcookie("researchSurveys", $researchSurveys, time() + (86400 *30), "/");
+                setcookie("peopleSuggestions", $peopleSuggestions, time() + (86400 * 30), "/");
+//                if($hideUpvotes != null){
+//                    setcookie("hideUpvotes", $hideUpvotes, time() + (86400 * 30), "/");
+//                }else{
+//                    setcookie('hideUpvotes', 'undefined', time() + (86400 * 30), "/");
+//                }
                 if(isset($row['gender']) && $row['gender'] != ""){
                     $gender = $row['gender'];
                     setcookie('gender', $gender, time() + (86400 * 30), "/");
